@@ -31,6 +31,254 @@ This repository contains educational materials and practical examples for learni
      - `find_even_odd()` - Classify numbers as even or odd
      - `find_positive()` - Classify numbers as positive, negative, or zero
 
+   ---
+
+   ### 📚 Untitled1.ipynb - Complete Guide for Beginners
+
+   #### Learning Objectives
+   This notebook teaches you **how to write and use functions** - the building blocks of programming. By the end, you'll understand how to create reusable code that makes your programs more organized and efficient.
+
+   ---
+
+   #### 1️⃣ **add_number() Function - Adding Numbers Together**
+
+   **What You'll Learn**: How to create a function that takes multiple inputs and returns a result.
+
+   ```python
+   def add_number(num1, num2, num3):
+       return num1 + num2 + num3
+
+   # Testing the function
+   num1 = 5
+   num2 = 7
+   num3 = 6
+   print("sum:", add_number(num1, num2, num3))
+   # Output: sum: 18
+   ```
+
+   **Breaking It Down**:
+   - `def add_number()` - Declares a new function named `add_number`
+   - `(num1, num2, num3)` - The function accepts 3 parameters (inputs)
+   - `return num1 + num2 + num3` - Adds all three numbers and returns the result
+   - The function adds: 5 + 7 + 6 = 18
+
+   **Real-World Use**: Calculate total sales from multiple stores, sum up scores, total expenses
+
+   **What You Practice**: Defining functions with multiple parameters and understanding the return statement
+
+   ---
+
+   #### 2️⃣ **area_rect() Function - Calculate Rectangle Area**
+
+   **What You'll Learn**: How to use user input and apply mathematical formulas in functions.
+
+   ```python
+   def area_rect(l, b):
+       return l * b
+
+   l = int(input("enter the length:"))
+   b = int(input("enter the breadth:"))
+   area = area_rect(l, b)
+   print("Area of rectangle:", area)
+   ```
+
+   **Example**:
+   - User enters length: 3
+   - User enters breadth: 4
+   - Function calculates: 3 × 4 = 12
+   - Output: "Area of rectangle: 12"
+
+   **Breaking It Down**:
+   - `int(input())` - Gets a number from the user and converts it to an integer
+   - `l * b` - Multiplies length by breadth (the formula for rectangle area)
+   - The result is stored and displayed
+
+   **Real-World Use**: Calculate land area, floor space, room dimensions
+
+   **What You Practice**: Accepting user input, type conversion, and applying formulas
+
+   ---
+
+   #### 3️⃣ **area_circle() Function - Calculate Circle Area**
+
+   **What You'll Learn**: How to use mathematical constants (like π) in calculations.
+
+   ```python
+   def area_circle(l):
+       return 3.14 * l * l
+
+   l = int(input("enter the radius:"))
+   area = area_circle(l)
+   print("Area of circle:", area)
+   ```
+
+   **Example**:
+   - User enters radius: 3
+   - Function calculates: 3.14 × 3 × 3 = 28.26
+   - Output: "Area of circle: 28.26"
+
+   **Breaking It Down**:
+   - `3.14` - The approximation of pi (π)
+   - `l * l` - Radius squared (r²)
+   - Formula: Area = π × r²
+
+   **Note**: The parameter is named `l` but it represents the radius. In a real project, better naming would be `radius` instead of `l`.
+
+   **Real-World Use**: Calculate area of circular land, pizza size, circular pools
+
+   **What You Practice**: Working with mathematical constants and exponents
+
+   ---
+
+   #### 4️⃣ **find_max() Function - Find the Largest Number**
+
+   **What You'll Learn**: How to work with lists (arrays) and find specific values.
+
+   ```python
+   def find_max(numbers):
+       return max(numbers)
+
+   li = [3, 7, 2, 9, 5, 78, 2]
+   print("Max number is:", find_max(li))
+   # Output: Max number is: 78
+   ```
+
+   **Breaking It Down**:
+   - `li = [3, 7, 2, 9, 5, 78, 2]` - Creates a list (array) of numbers
+   - `max(numbers)` - Built-in Python function that finds the largest number
+   - The function compares all values: 3, 7, 2, 9, 5, 78, 2 → **78 is the largest**
+
+   **Real-World Use**: Find highest score, maximum temperature, best sales, highest salary
+
+   **What You Practice**: Working with lists and using built-in Python functions
+
+   ---
+
+   #### 5️⃣ **find_even_odd() Function - Classify Numbers as Even or Odd**
+
+   **What You'll Learn**: How to use conditional statements (if-else) to make decisions in your code.
+
+   ```python
+   def find_even_odd(number):
+       if number % 2 == 0:
+           return "even"
+       else:
+           return "odd"
+
+   l = int(input("Enter the number:"))
+   print("number is:", find_even_odd(l))
+   ```
+
+   **Example**:
+   - User enters: 4
+   - `4 % 2 == 0` → True (no remainder when dividing by 2)
+   - Output: "number is: even"
+
+   **Another Example**:
+   - User enters: 7
+   - `7 % 2 == 0` → False (remainder of 1 when dividing by 2)
+   - Output: "number is: odd"
+
+   **Breaking It Down**:
+   - `%` - The modulo operator (gives remainder after division)
+   - `if number % 2 == 0:` - "If the remainder is 0, the number is even"
+   - `else:` - "Otherwise (remainder is 1), the number is odd"
+
+   **Real-World Use**: Seat assignment (even/odd row numbers), prize distribution, data categorization
+
+   **What You Practice**: Using modulo operator and if-else conditional logic
+
+   ---
+
+   #### 6️⃣ **find_positive() Function - Classify Numbers as Positive, Negative, or Zero**
+
+   **What You'll Learn**: How to use multiple conditional branches (if-elif-else) for more complex decisions.
+
+   ```python
+   def find_positive(number):
+       if number > 0:
+           return "positive"
+       elif number == 0:
+           return "neither positive nor negative"
+       else:
+           return "negative"
+
+   l = int(input("Enter the number:"))
+   print("number is:", find_positive(l))
+   ```
+
+   **Examples**:
+
+   **Example 1: Positive Number**
+   - User enters: 5
+   - `5 > 0` → True
+   - Output: "number is: positive"
+
+   **Example 2: Zero**
+   - User enters: 0
+   - `0 > 0` → False, goes to `elif`
+   - `0 == 0` → True
+   - Output: "number is: neither positive nor negative"
+
+   **Example 3: Negative Number**
+   - User enters: -3
+   - `−3 > 0` → False, goes to `elif`
+   - `−3 == 0` → False, goes to `else`
+   - Output: "number is: negative"
+
+   **Breaking It Down**:
+   - `if` - First condition to check
+   - `elif` (else if) - Second condition to check if first is false
+   - `else` - What to do if all previous conditions are false
+   - `>` means "greater than"
+   - `==` means "equal to" (used for comparison)
+
+   **Real-World Use**: Profit/loss analysis, temperature classification, credit score evaluation
+
+   **What You Practice**: Using if-elif-else logic for multi-way decisions
+
+   ---
+
+   ### 📋 Summary: What You Learn from Untitled1.ipynb
+
+   | Concept | What It Does | Example |
+   |---------|-------------|---------|
+   | **Functions** | Reusable blocks of code | `def add_number(a, b, c)` |
+   | **Parameters** | Inputs to a function | `add_number(5, 7, 6)` |
+   | **Return Statement** | What the function gives back | `return num1 + num2 + num3` |
+   | **User Input** | Get data from the user | `input("Enter a number:")` |
+   | **Type Conversion** | Convert text to numbers | `int(input())` |
+   | **Lists** | Collection of multiple values | `[3, 7, 2, 9, 5, 78]` |
+   | **Modulo Operator (%)** | Get remainder of division | `7 % 2 = 1` (odd) |
+   | **If Statement** | Make decisions if something is true | `if number > 0:` |
+   | **Elif Statement** | Alternative condition to check | `elif number == 0:` |
+   | **Else Statement** | Default action if all conditions false | `else:` |
+
+   ---
+
+   ### 💡 How to Use This Notebook
+
+   1. **Run Each Cell**: Click "Run" to execute the code and see the output
+   2. **Modify Values**: Change the numbers in `num1`, `num2`, `num3` and run again
+   3. **Test the Functions**: Try entering different inputs when prompted
+   4. **Experiment**: Create similar functions for other calculations
+   5. **Challenge Yourself**: 
+      - Create a function to find the smallest number
+      - Create a function to check if a number is prime
+      - Create a function to calculate the area of a triangle
+
+   ---
+
+   ### 🎯 Learning Tips
+
+   - **Understand the "Why"**: Don't just run the code; understand what each line does
+   - **Practice Variations**: Modify the functions and test different inputs
+   - **Predict the Output**: Before running, try to predict what the result will be
+   - **Relate to Real Life**: Think about when you would use each function in real problems
+   - **Don't Rush**: Master these basics before moving to more advanced topics
+
+   ---
+
 2. **numpy.ipynb** 📊 _Intermediate Level_
    - **Purpose**: Master NumPy library for numerical computing and data manipulation
    - **Best For**: Those who understand Python basics and want to work with arrays and data
